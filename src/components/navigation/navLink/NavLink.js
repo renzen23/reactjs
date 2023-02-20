@@ -19,7 +19,7 @@ export default function NavLink() {
           <a href="/about-us" className="nav-item nav-link">
             About
           </a>
-          <a href="service.html" className="nav-item nav-link">
+          <a href="services" className="nav-item nav-link">
             Service
           </a>
           <a href="/project" className="nav-item nav-link">
@@ -34,7 +34,7 @@ export default function NavLink() {
               Pages
             </a>
             <div className="dropdown-menu m-0">
-              <a href="team.html" className="dropdown-item">
+              <a href="/team" className="dropdown-item">
                 Our Team
               </a>
               <a href="testimonial.html" className="dropdown-item">

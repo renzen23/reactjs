@@ -1,11 +1,9 @@
 import React from "react";
-import BasicHero from "../hero/basicHero/BasicHero";
 import Socials from "../navigation/socials/Socials";
 
 export default function AboutSection() {
   return (
     <section>
-      <BasicHero />
       <div className="container-xxl py-5">
         <div className="container px-lg-5">
           <div className="row g-5">

@@ -16,22 +16,41 @@ import Footer from "./components/navigation/footer/Footer";
 import PortfolioSection from "./components/section/PorfolioSection";
 import NewsletterSection from "./components/section/NewsletterSection";
 import AboutSection from "./components/section/AboutSection";
+import ServiceSection from "./components/section/ServiceSection";
+import Breadcrumb from "./components/navigation/breadcrumbs/Breadcrumbs";
+import BasicHero from "./components/hero/basicHero/BasicHero";
+import TeamSection from "./components/section/TeamSection";
 
 export default function App() {
+  const teamSection = (
+    <Fragment>
+      <Breadcrumb title="Our Team" />
+      <TeamSection />
+    </Fragment>
+  );
+  const servicesSection = (
+    <Fragment>
+      <Breadcrumb title="Services" />
+      <ServiceSection />
+    </Fragment>
+  );
   const portfolioSection = (
     <Fragment>
+      <Breadcrumb title="Project" />
       <PortfolioSection />
       <NewsletterSection />
     </Fragment>
   );
   const aboutUsSection = (
     <Fragment>
+      <Breadcrumb title="About us" />
       <AboutSection />
       <NewsletterSection />
     </Fragment>
   );
   const homeSection = (
     <Fragment>
+      <BasicHero />
       <AboutSection />
       <NewsletterSection />
     </Fragment>
@@ -56,12 +75,20 @@ export default function App() {
               path="project"
               element={<Page title="Project" sections={portfolioSection} />}
             />
+            <Route
+              path="services"
+              element={<Page title="Services" sections={servicesSection} />}
+            />
+            <Route
+              path="team"
+              element={<Page title="Our Team" sections={teamSection} />}
+            />
           </Routes>
         </BrowserRouter>
         <Footer />
       </div>
       <a
-        href="#"
+        href="/"
         className="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"
       >
         <i className="bi bi-arrow-up" />

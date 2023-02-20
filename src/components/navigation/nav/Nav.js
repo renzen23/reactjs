@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../logo/Logo";
 import NavLink from "../navLink/NavLink";
 import SearchModal from "../../modal/search/Search";
+import Breadcrumb from "../breadcrumbs/Breadcrumbs";
 
 export default function Nav() {
   return (
