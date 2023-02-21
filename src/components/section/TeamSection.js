@@ -23,7 +23,7 @@ export default function TeamSection() {
                 <div className="d-flex">
                   <div
                     className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px;" }}
+                    style={{ width: "75px" }}
                   >
                     <a
                       className="btn btn-square text-primary bg-white my-1"
@@ -70,7 +70,7 @@ export default function TeamSection() {
                 <div className="d-flex">
                   <div
                     className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px;" }}
+                    style={{ width: "75px" }}
                   >
                     <a
                       className="btn btn-square text-primary bg-white my-1"
@@ -117,7 +117,7 @@ export default function TeamSection() {
                 <div className="d-flex">
                   <div
                     className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px;" }}
+                    style={{ width: "75px" }}
                   >
                     <a
                       className="btn btn-square text-primary bg-white my-1"

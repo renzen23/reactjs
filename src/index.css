@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.owl-carousel {
+  display: flex !important;
+}
+.testimonial-item {
+  margin-right: 10px;
+}

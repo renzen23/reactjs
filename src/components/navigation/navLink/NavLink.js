@@ -37,7 +37,7 @@ export default function NavLink() {
               <a href="/team" className="dropdown-item">
                 Our Team
               </a>
-              <a href="testimonial.html" className="dropdown-item">
+              <a href="testimonial" className="dropdown-item">
                 Testimonial
               </a>
               <a href="404.html" className="dropdown-item">
@@ -45,7 +45,7 @@ export default function NavLink() {
               </a>
             </div>
           </div>
-          <a href="contact.html" className="nav-item nav-link">
+          <a href="contact" className="nav-item nav-link">
             Contact
           </a>
         </div>
