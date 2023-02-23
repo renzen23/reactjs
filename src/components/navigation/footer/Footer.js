@@ -1,5 +1,29 @@
 import React from "react";
+import Subscribe from "../../forms/subscribe/Subscribe";
+import Socials from "../../navigation/socials/Socials";
 export default function Footer() {
+  const socialData = [
+    {
+      className: "btn btn-outline-light btn-social",
+      text: null,
+      icon: "fab fa-facebook-f",
+    },
+    {
+      className: "btn btn-outline-light btn-social",
+      text: null,
+      icon: "fab fa-twitter",
+    },
+    {
+      className: "btn btn-outline-light btn-social",
+      text: null,
+      icon: "fab fa-instagram",
+    },
+    {
+      className: "btn btn-outline-light btn-social",
+      text: null,
+      icon: "fab fa-linkedin-in",
+    },
+  ];
   return (
     <div>
       <div
@@ -21,21 +45,7 @@ export default function Footer() {
                 <i className="fa fa-envelope me-3"></i>info@example.com
               </p>
               <div className="d-flex pt-2">
-                <a className="btn btn-outline-light btn-social" href="">
-                  <i className="fab fa-twitter" />
-                </a>
-                <a className="btn btn-outline-light btn-social" href="">
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a className="btn btn-outline-light btn-social" href="">
-                  <i className="fab fa-youtube" />
-                </a>
-                <a className="btn btn-outline-light btn-social" href="">
-                  <i className="fab fa-instagram" />
-                </a>
-                <a className="btn btn-outline-light btn-social" href="">
-                  <i className="fab fa-linkedin-in" />
-                </a>
+                <Socials data={socialData} />
               </div>
             </div>
             <div className="col-md-6 col-lg-3">
@@ -109,20 +119,7 @@ export default function Footer() {
                 Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
                 Curabitur facilisis ornare velit non vulpu
               </p>
-              <div className="position-relative w-100 mt-3">
-                <input
-                  className="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your Email"
-                  style={{ height: "48px" }}
-                />
-                <button
-                  type="button"
-                  className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
-                >
-                  <i className="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </div>
+              <Subscribe />
             </div>
           </div>
         </div>

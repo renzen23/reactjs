@@ -2,6 +2,29 @@ import React from "react";
 import Socials from "../navigation/socials/Socials";
 
 export default function AboutSection() {
+  const socialData = [
+    {
+      className: "btn btn-outline-primary btn-square me-3",
+      text: null,
+      icon: "fab fa-facebook-f",
+    },
+    {
+      className: "btn btn-outline-primary btn-square me-3",
+      text: null,
+      icon: "fab fa-twitter",
+    },
+    {
+      className: "btn btn-outline-primary btn-square me-3",
+      text: null,
+      icon: "fab fa-instagram",
+    },
+    {
+      className: "btn btn-outline-primary btn-square me-3",
+      text: null,
+      icon: "fab fa-linkedin-in",
+    },
+  ];
+
   return (
     <section>
       <div className="container-xxl py-5">
@@ -43,7 +66,14 @@ export default function AboutSection() {
                   </h6>
                 </div>
               </div>
-              <Socials />
+              <div className="d-flex align-items-center mt-4">
+                <a className="btn btn-primary rounded-pill px-4 me-3" href="#">
+                  Read More
+                </a>
+                <div className="d-flex align-items-center">
+                  <Socials data={socialData} />
+                </div>
+              </div>
             </div>
             <div className="col-lg-6">
               {/* <img className="img-fluid wow zoomIn" data-wow-delay="0.5s" src={require("./img/about.jpg")} alt='about'/> */}
