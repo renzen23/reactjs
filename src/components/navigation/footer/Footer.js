@@ -1,6 +1,8 @@
 import React from "react";
 import Subscribe from "../../forms/subscribe/Subscribe";
 import Socials from "../../navigation/socials/Socials";
+// import Portfolio from "../../data/dataGallery.js";
+
 export default function Footer() {
   const socialData = [
     {
@@ -24,6 +26,56 @@ export default function Footer() {
       icon: "fab fa-linkedin-in",
     },
   ];
+
+  const portfolio = [
+    {
+      id: 1,
+      name: "Project Name",
+      catergory: "Web Design",
+      imageUrl: "portfolio-1.jpg",
+    },
+    {
+      id: 2,
+      name: "Project Name",
+      catergory: "Web Design",
+      imageUrl: "portfolio-2.jpg",
+    },
+    {
+      id: 3,
+      name: "Project Name",
+      catergory: "chemist",
+      imageUrl: "portfolio-3.jpg",
+    },
+    {
+      id: 4,
+      name: "Project Name",
+      catergory: "Site Migration",
+      imageUrl: "portfolio-4.jpg",
+    },
+    {
+      id: 5,
+      name: "Project Name",
+      catergory: "Web Design",
+      imageUrl: "portfolio-5.jpg",
+    },
+    {
+      id: 6,
+      name: "Project Name",
+      catergory: "Web Development",
+      imageUrl: "portfolio-6.jpg",
+    },
+  ];
+
+  const GalleryList = portfolio.map((value) => (
+    <div key={value.id} className="col-4">
+      <img
+        src={require(`../../../img/${value.imageUrl}`)}
+        className="img-fluid"
+        alt={value.name}
+      />
+    </div>
+  ));
+
   return (
     <div>
       <div
@@ -68,50 +120,7 @@ export default function Footer() {
             </div>
             <div className="col-md-6 col-lg-3">
               <h5 className="text-white mb-4">Project Gallery</h5>
-              <div className="row g-2">
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-1.jpg")}
-                    alt="Image"
-                  />
-                </div>
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-2.jpg")}
-                    alt="Image"
-                  />
-                </div>
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-3.jpg")}
-                    alt="Image"
-                  />
-                </div>
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-4.jpg")}
-                    alt="Image"
-                  />
-                </div>
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-5.jpg")}
-                    alt="Image"
-                  />
-                </div>
-                <div className="col-4">
-                  <img
-                    className="img-fluid"
-                    src={require("../../../img/portfolio-6.jpg")}
-                    alt="Image"
-                  />
-                </div>
-              </div>
+              <div className="row g-2">{GalleryList}</div>
             </div>
             <div className="col-md-6 col-lg-3">
               <h5 className="text-white mb-4">Newsletter</h5>
