@@ -1,6 +1,8 @@
 import { Fragment } from "react";
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
-export default function NavLink() {
+export default function NavLinks() {
   return (
     <Fragment>
       <button
@@ -13,41 +15,80 @@ export default function NavLink() {
       </button>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav ms-auto py-0">
-          <a href="/" className="nav-item nav-link active">
+          {/* <NavLink exact activeClassName="active" to="/">
             Home
-          </a>
-          <a href="/about-us" className="nav-item nav-link">
+          </NavLink> */}
+          <NavLink
+            to="/"
+            className="nav-item nav-link"
+            activeClassName="active"
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/about-us"
+            className="nav-item nav-link"
+            activeClassName="active"
+          >
             About
-          </a>
-          <a href="services" className="nav-item nav-link">
+          </NavLink>
+
+          <NavLink
+            to="services"
+            className="nav-item nav-link"
+            activeClassName="active"
+          >
             Service
-          </a>
-          <a href="/project" className="nav-item nav-link">
+          </NavLink>
+          <NavLink
+            to="/project"
+            className="nav-item nav-link"
+            activeClassName="active"
+          >
             Project
-          </a>
+          </NavLink>
           <div className="nav-item dropdown">
             <a
               href="#"
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
+              activeClassName="active"
             >
               Pages
             </a>
             <div className="dropdown-menu m-0">
-              <a href="/team" className="dropdown-item">
+              <NavLink
+                to="/team"
+                className="dropdown-item"
+                activeClassName="active"
+              >
                 Our Team
-              </a>
-              <a href="testimonial" className="dropdown-item">
+              </NavLink>
+
+              <NavLink
+                to="testimonial"
+                className="dropdown-item"
+                activeClassName="active"
+              >
                 Testimonial
-              </a>
-              <a href="404.html" className="dropdown-item">
+              </NavLink>
+              <NavLink
+                to="404.html"
+                className="dropdown-item"
+                activeClassName="active"
+              >
                 404 Page
-              </a>
+              </NavLink>
             </div>
           </div>
-          <a href="contact" className="nav-item nav-link">
+          <NavLink
+            to="contact"
+            className="nav-item nav-link"
+            activeClassName="active"
+          >
             Contact
-          </a>
+          </NavLink>
         </div>
         <button
           type="button"

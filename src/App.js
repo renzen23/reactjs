@@ -1,6 +1,6 @@
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 // Pages
 import Page from "./pages/Page";
 import "./App.css";
@@ -87,40 +87,39 @@ export default function App() {
           </div>
         </div>
         <Nav />
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={<Page title="Home" sections={homeSection} />}
-            />
-            <Route
-              path="about-us"
-              element={<Page title="About Us" sections={aboutUsSection} />}
-            />
-            <Route
-              path="project"
-              element={<Page title="Project" sections={portfolioSection} />}
-            />
-            <Route
-              path="services"
-              element={<Page title="Services" sections={servicesSection} />}
-            />
-            <Route
-              path="team"
-              element={<Page title="Our Team" sections={teamSection} />}
-            />
-            <Route
-              path="testimonial"
-              element={
-                <Page title="Testimonial" sections={testimonialSection} />
-              }
-            />
-            <Route
-              path="contact"
-              element={<Page title="Contact" sections={contactSection} />}
-            />
-          </Routes>
-        </BrowserRouter>
+        {/* <BrowserRouter> */}
+        <Routes>
+          <Route
+            path={"/"}
+            element={<Page title="Home" sections={homeSection} />}
+          />
+          <Route
+            path={"about-us"}
+            element={<Page title="About Us" sections={aboutUsSection} />}
+          />
+          <Route
+            path="project"
+            element={<Page title="Project" sections={portfolioSection} />}
+          />
+          <Route
+            path="services"
+            element={<Page title="Services" sections={servicesSection} />}
+          />
+          <Route
+            path="team"
+            element={<Page title="Our Team" sections={teamSection} />}
+          />
+          <Route
+            path="testimonial"
+            element={<Page title="Testimonial" sections={testimonialSection} />}
+          />
+          <Route
+            activeClassName="active"
+            path="contact"
+            element={<Page title="Contact" sections={contactSection} />}
+          />
+        </Routes>
+        {/* </BrowserRouter> */}
         <Footer />
       </div>
       <a

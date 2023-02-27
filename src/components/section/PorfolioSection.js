@@ -1,4 +1,39 @@
+import { Portfolio } from "../data/dataGallery";
 export default function PortfolioSection() {
+  const GalleryList = Portfolio.map((value) => (
+    <div
+      key={value.id}
+      className="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
+      data-wow-delay="0.1s"
+    >
+      <div className="position-relative rounded overflow-hidden">
+        <img
+          className="img-fluid w-100"
+          src={require(`../../img/${value.imageUrl}`)}
+          alt=""
+        />
+        <div className="portfolio-overlay">
+          <a
+            className="btn btn-light"
+            href={require(`../../img/${value.imageUrl}`)}
+            data-lightbox="portfolio"
+          >
+            <i className="fa fa-plus fa-2x text-primary"></i>
+          </a>
+          <div className="mt-auto">
+            <small className="text-white">
+              <i className="fa fa-folder me-2" />
+              {value.catergory}
+            </small>
+            <a className="h5 d-block text-white mt-1 mb-0" href="">
+              {value.name}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
+
   return (
     <div className="container-xxl py-5">
       <div className="container px-lg-5">
@@ -26,188 +61,7 @@ export default function PortfolioSection() {
             </ul>
           </div>
         </div>
-        <div className="row g-4 portfolio-container">
-          <div
-            className="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-            data-wow-delay="0.1s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-1.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-1.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-            data-wow-delay="0.3s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-2.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-2.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-            data-wow-delay="0.6s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-3.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-3.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-            data-wow-delay="0.1s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-4.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-4.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
-            data-wow-delay="0.3s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-5.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-5.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 col-md-6 portfolio-item second wow zoomIn"
-            data-wow-delay="0.6s"
-          >
-            <div className="position-relative rounded overflow-hidden">
-              <img
-                className="img-fluid w-100"
-                src={require("../../img/portfolio-6.jpg")}
-                alt=""
-              />
-              <div className="portfolio-overlay">
-                <a
-                  className="btn btn-light"
-                  href="../../img/portfolio-6.jpg"
-                  data-lightbox="portfolio"
-                >
-                  <i className="fa fa-plus fa-2x text-primary"></i>
-                </a>
-                <div className="mt-auto">
-                  <small className="text-white">
-                    <i className="fa fa-folder me-2" />
-                    Web Design
-                  </small>
-                  <a className="h5 d-block text-white mt-1 mb-0" href="">
-                    Project Name
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="row g-4 portfolio-container">{GalleryList}</div>
       </div>
     </div>
   );

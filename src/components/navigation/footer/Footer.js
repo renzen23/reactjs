@@ -1,7 +1,8 @@
 import React from "react";
 import Subscribe from "../../forms/subscribe/Subscribe";
 import Socials from "../../navigation/socials/Socials";
-// import Portfolio from "../../data/dataGallery.js";
+import { Portfolio } from "../../data/dataGallery";
+import Gallery from "../../gallery/Gallery";
 
 export default function Footer() {
   const socialData = [
@@ -27,54 +28,17 @@ export default function Footer() {
     },
   ];
 
-  const portfolio = [
-    {
-      id: 1,
-      name: "Project Name",
-      catergory: "Web Design",
-      imageUrl: "portfolio-1.jpg",
-    },
-    {
-      id: 2,
-      name: "Project Name",
-      catergory: "Web Design",
-      imageUrl: "portfolio-2.jpg",
-    },
-    {
-      id: 3,
-      name: "Project Name",
-      catergory: "chemist",
-      imageUrl: "portfolio-3.jpg",
-    },
-    {
-      id: 4,
-      name: "Project Name",
-      catergory: "Site Migration",
-      imageUrl: "portfolio-4.jpg",
-    },
-    {
-      id: 5,
-      name: "Project Name",
-      catergory: "Web Design",
-      imageUrl: "portfolio-5.jpg",
-    },
-    {
-      id: 6,
-      name: "Project Name",
-      catergory: "Web Development",
-      imageUrl: "portfolio-6.jpg",
-    },
-  ];
-
-  const GalleryList = portfolio.map((value) => (
-    <div key={value.id} className="col-4">
-      <img
-        src={require(`../../../img/${value.imageUrl}`)}
-        className="img-fluid"
-        alt={value.name}
-      />
-    </div>
-  ));
+  // const GalleryList = Portfolio.map((value) => (
+  //   <div key={value.id} className="col-4">
+  //     <p>{value.catergory}</p>
+  //     <p>{value.name}</p>
+  //     <img
+  //       src={require(`../../../img/${value.imageUrl}`)}
+  //       className="img-fluid"
+  //       alt={value.name}
+  //     />
+  //   </div>
+  // ));
 
   return (
     <div>
@@ -120,7 +84,10 @@ export default function Footer() {
             </div>
             <div className="col-md-6 col-lg-3">
               <h5 className="text-white mb-4">Project Gallery</h5>
-              <div className="row g-2">{GalleryList}</div>
+              {/* <div className="row g-2">{GalleryList}</div> */}
+              <div className="row g-2">
+                <Gallery data={Portfolio} />
+              </div>
             </div>
             <div className="col-md-6 col-lg-3">
               <h5 className="text-white mb-4">Newsletter</h5>
