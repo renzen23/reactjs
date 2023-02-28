@@ -1,6 +1,77 @@
 import { Fragment } from "react";
-
+import Socials from "../navigation/socials/Socials";
 export default function TeamSection() {
+  const socialData = [
+    {
+      className: "btn btn-square text-primary bg-white my-1",
+      text: null,
+      icon: "fab fa-facebook-f",
+    },
+    {
+      className: "btn btn-square text-primary bg-white my-1",
+      text: null,
+      icon: "fab fa-twitter",
+    },
+    {
+      className: "btn btn-square text-primary bg-white my-1",
+      text: null,
+      icon: "fab fa-instagram",
+    },
+    {
+      className: "btn btn-square text-primary bg-white my-1",
+      text: null,
+      icon: "fab fa-linkedin-in",
+    },
+  ];
+
+  const teanMembers = [
+    {
+      id: 1,
+      name: "Jhon Doe",
+      position: "CEO",
+      imageUrl: "team-1.jpg",
+    },
+    {
+      id: 2,
+      name: "Emma William",
+      position: "Manager",
+      imageUrl: "team-2.jpg",
+    },
+    {
+      id: 3,
+      name: "Noah Michael",
+      position: "Designer",
+      imageUrl: "team-3.jpg",
+    },
+  ];
+
+  const TeamList = teanMembers.map((value) => (
+    // <div key={value.id} className="team-item">
+    <Fragment>
+      <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div className="team-item">
+          <div className="d-flex">
+            <div
+              className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
+              style={{ width: "75px" }}
+            >
+              <Socials data={socialData} />
+            </div>
+            <img
+              className="img-fluid rounded w-100"
+              src={require(`../../img/${value.imageUrl}`)}
+              alt={value.name}
+            />
+          </div>
+          <div className="px-4 py-3">
+            <h5 className="fw-bold m-0">{value.name}</h5>
+            <small>{value.position}</small>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  ));
+
   return (
     <Fragment>
       <div className="container-xxl py-5">
@@ -14,149 +85,7 @@ export default function TeamSection() {
             </h6>
             <h2 className="mt-2">Meet Our Team Members</h2>
           </div>
-          <div className="row g-4">
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="team-item">
-                <div className="d-flex">
-                  <div
-                    className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px" }}
-                  >
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                  <img
-                    className="img-fluid rounded w-100"
-                    src={require("../../img/team-1.jpg")}
-                    alt=""
-                  />
-                </div>
-                <div className="px-4 py-3">
-                  <h5 className="fw-bold m-0">Jhon Doe</h5>
-                  <small>CEO</small>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="team-item">
-                <div className="d-flex">
-                  <div
-                    className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px" }}
-                  >
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                  <img
-                    className="img-fluid rounded w-100"
-                    src={require("../../img/team-2.jpg")}
-                    alt=""
-                  />
-                </div>
-                <div className="px-4 py-3">
-                  <h5 className="fw-bold m-0">Emma William</h5>
-                  <small>Manager</small>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.6s"
-            >
-              <div className="team-item">
-                <div className="d-flex">
-                  <div
-                    className="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5"
-                    style={{ width: "75px" }}
-                  >
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a
-                      className="btn btn-square text-primary bg-white my-1"
-                      href="/"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                  <img
-                    className="img-fluid rounded w-100"
-                    src={require("../../img/team-3.jpg")}
-                    alt=""
-                  />
-                </div>
-                <div className="px-4 py-3">
-                  <h5 className="fw-bold m-0">Noah Michael</h5>
-                  <small>Designer</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="row g-4">{TeamList}</div>
         </div>
       </div>
     </Fragment>
