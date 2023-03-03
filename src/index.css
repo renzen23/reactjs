@@ -13,8 +13,9 @@ code {
 }
 
 .owl-carousel {
-  display: flex !important;
+  display: inline !important;
 }
+
 .testimonial-item {
   margin-right: 10px;
 }

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
+import SearchModal from "../../modal/search/SearchModal";
 export default function NavLinks() {
   return (
     <Fragment>
@@ -15,13 +15,10 @@ export default function NavLinks() {
       </button>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav ms-auto py-0">
-          {/* <NavLink exact activeClassName="active" to="/">
-            Home
-          </NavLink> */}
           <NavLink
             to="/"
             className="nav-item nav-link"
-            activeClassName="active"
+            activeclassname="active"
           >
             Home
           </NavLink>
@@ -29,7 +26,7 @@ export default function NavLinks() {
           <NavLink
             to="/about-us"
             className="nav-item nav-link"
-            activeClassName="active"
+            activeclassname="active"
           >
             About
           </NavLink>
@@ -37,14 +34,14 @@ export default function NavLinks() {
           <NavLink
             to="services"
             className="nav-item nav-link"
-            activeClassName="active"
+            activeclassname="active"
           >
             Service
           </NavLink>
           <NavLink
             to="/project"
             className="nav-item nav-link"
-            activeClassName="active"
+            activeclassname="active"
           >
             Project
           </NavLink>
@@ -53,7 +50,7 @@ export default function NavLinks() {
               href="#"
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              activeClassName="active"
+              activeclassname="active"
             >
               Pages
             </a>
@@ -61,7 +58,7 @@ export default function NavLinks() {
               <NavLink
                 to="/team"
                 className="dropdown-item"
-                activeClassName="active"
+                activeclassname="active"
               >
                 Our Team
               </NavLink>
@@ -69,14 +66,14 @@ export default function NavLinks() {
               <NavLink
                 to="testimonial"
                 className="dropdown-item"
-                activeClassName="active"
+                activeclassname="active"
               >
                 Testimonial
               </NavLink>
               <NavLink
                 to="404.html"
                 className="dropdown-item"
-                activeClassName="active"
+                activeclassname="active"
               >
                 404 Page
               </NavLink>
@@ -85,7 +82,7 @@ export default function NavLinks() {
           <NavLink
             to="contact"
             className="nav-item nav-link"
-            activeClassName="active"
+            activeclassname="active"
           >
             Contact
           </NavLink>

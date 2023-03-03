@@ -3,22 +3,22 @@ import Socials from "../navigation/socials/Socials";
 export default function TeamSection() {
   const socialData = [
     {
-      className: "btn btn-square text-primary bg-white my-1",
+      className: "btn btn-square text-primary bg-white my-1 m1",
       text: null,
       icon: "fab fa-facebook-f",
     },
     {
-      className: "btn btn-square text-primary bg-white my-1",
+      className: "btn btn-square text-primary bg-white my-1 m2",
       text: null,
       icon: "fab fa-twitter",
     },
     {
-      className: "btn btn-square text-primary bg-white my-1",
+      className: "btn btn-square text-primary bg-white my-1 m3",
       text: null,
       icon: "fab fa-instagram",
     },
     {
-      className: "btn btn-square text-primary bg-white my-1",
+      className: "btn btn-square text-primary bg-white my-1 m4",
       text: null,
       icon: "fab fa-linkedin-in",
     },
@@ -46,8 +46,7 @@ export default function TeamSection() {
   ];
 
   const TeamList = teanMembers.map((value) => (
-    // <div key={value.id} className="team-item">
-    <Fragment>
+    <Fragment key={value.id}>
       <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
         <div className="team-item">
           <div className="d-flex">

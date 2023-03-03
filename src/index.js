@@ -4,6 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import $ from "jquery";
+import { WOW } from "wowjs";
+
+const wow = new WOW();
+wow.init();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -111,12 +116,22 @@ reportWebVitals();
     },
   });
 
+  var scrolled = false;
+
+  $(window).on("scroll", function () {
+    if (!scrolled) {
+      scrolled = true;
+      wow.init();
+    }
+  });
+
   // Portfolio isotope and filter
   var portfolioIsotope = $(".portfolio-container").isotope({
     itemSelector: ".portfolio-item",
     layoutMode: "fitRows",
   });
   $("#portfolio-flters li").on("click", function () {
+    alert("test");
     $("#portfolio-flters li").removeClass("active");
     $(this).addClass("active");
 

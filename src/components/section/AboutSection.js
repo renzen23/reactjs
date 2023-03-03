@@ -4,22 +4,22 @@ import Socials from "../navigation/socials/Socials";
 export default function AboutSection() {
   const socialData = [
     {
-      className: "btn btn-outline-primary btn-square me-3",
+      className: "btn btn-outline-primary btn-square me-3 m1",
       text: null,
       icon: "fab fa-facebook-f",
     },
     {
-      className: "btn btn-outline-primary btn-square me-3",
+      className: "btn btn-outline-primary btn-square me-3 m2",
       text: null,
       icon: "fab fa-twitter",
     },
     {
-      className: "btn btn-outline-primary btn-square me-3",
+      className: "btn btn-outline-primary btn-square me-3 m3",
       text: null,
       icon: "fab fa-instagram",
     },
     {
-      className: "btn btn-outline-primary btn-square me-3",
+      className: "btn btn-outline-primary btn-square me-3 m4",
       text: null,
       icon: "fab fa-linkedin-in",
     },
@@ -76,7 +76,6 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="col-lg-6">
-              {/* <img className="img-fluid wow zoomIn" data-wow-delay="0.5s" src={require("./img/about.jpg")} alt='about'/> */}
               <img
                 className="img-fluid wow zoomIn"
                 data-wow-delay="0.5s"

@@ -1,12 +1,8 @@
 import { Fragment } from "react";
 // Owl
-// import OwlCarousel from "react-owl-carousel";
+import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-
-// import "owl.carousel/dist/owl.carousel.js";
-// import OwlCarousel from "react-owl-carousel";
-
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 
 const testimonialData = [
@@ -45,7 +41,10 @@ const testimonialData = [
 ];
 
 const testimonials = testimonialData.map((value) => (
-  <div className="testimonial-item bg-transparent border rounded text-white p-4">
+  <div
+    key={value.id}
+    className="testimonial-item bg-transparent border rounded text-white p-4"
+  >
     <i className="fa fa-quote-left fa-2x mb-3"></i>
     <p>{value.message}</p>
     <div className="d-flex align-items-center">
@@ -86,7 +85,9 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </OwlCarousel> */}
-            {testimonials}
+            <OwlCarousel items={3} className="owl-theme" loop nav margin={8}>
+              {testimonials}
+            </OwlCarousel>
           </div>
         </div>
       </div>

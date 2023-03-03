@@ -18,30 +18,35 @@ import BasicHero from "./components/hero/basicHero/BasicHero";
 import TeamSection from "./components/section/TeamSection";
 import TestimonialSection from "./components/section/TestimonialSection";
 import ContactSection from "./components/section/ContactSection";
+import SearchModal from "./components/modal/search/SearchModal";
 
 export default function App() {
   const contactSection = (
     <Fragment>
       <Breadcrumb title="Contact Us" />
       <ContactSection />
+      <SearchModal />
     </Fragment>
   );
   const testimonialSection = (
     <Fragment>
       <Breadcrumb title="Testimonial" />
       <TestimonialSection />
+      <SearchModal />
     </Fragment>
   );
   const teamSection = (
     <Fragment>
       <Breadcrumb title="Our Team" />
       <TeamSection />
+      <SearchModal />
     </Fragment>
   );
   const servicesSection = (
     <Fragment>
       <Breadcrumb title="Services" />
       <ServiceSection />
+      <SearchModal />
     </Fragment>
   );
   const portfolioSection = (
@@ -49,6 +54,7 @@ export default function App() {
       <Breadcrumb title="Project" />
       <PortfolioSection />
       <NewsletterSection />
+      <SearchModal />
     </Fragment>
   );
   const aboutUsSection = (
@@ -56,6 +62,7 @@ export default function App() {
       <Breadcrumb title="About us" />
       <AboutSection />
       <NewsletterSection />
+      <SearchModal />
     </Fragment>
   );
   const homeSection = (
@@ -67,6 +74,7 @@ export default function App() {
       <PortfolioSection />
       <TestimonialSection />
       <TeamSection />
+      <SearchModal />
     </Fragment>
   );
 
@@ -87,7 +95,7 @@ export default function App() {
           </div>
         </div>
         <Nav />
-        {/* <BrowserRouter> */}
+
         <Routes>
           <Route
             path={"/"}
@@ -119,7 +127,7 @@ export default function App() {
             element={<Page title="Contact" sections={contactSection} />}
           />
         </Routes>
-        {/* </BrowserRouter> */}
+
         <Footer />
       </div>
       <a

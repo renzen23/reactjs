@@ -1,9 +1,26 @@
 import { Portfolio } from "../data/dataGallery";
+import $ from "jquery";
+import { useEffect } from "react";
+
 export default function PortfolioSection() {
+  // useEffect(() => {
+  //   var portfolioIsotope = $(".portfolio-container").isotope({
+  //     itemSelector: ".portfolio-item",
+  //     layoutMode: "fitRows",
+  //   });
+  //   $("#portfolio-flters li").on("click", function () {
+  //     alert("test");
+  //     $("#portfolio-flters li").removeClass("active");
+  //     $(this).addClass("active");
+
+  //     portfolioIsotope.isotope({ filter: $(this).data("filter") });
+  //   });
+  // }, []);
+
   const GalleryList = Portfolio.map((value) => (
     <div
       key={value.id}
-      className="col-lg-4 col-md-6 portfolio-item first wow zoomIn"
+      className={`${value.category} col-lg-4 col-md-6 portfolio-item wow zoomIn`}
       data-wow-delay="0.1s"
     >
       <div className="position-relative rounded overflow-hidden">

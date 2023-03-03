@@ -7,22 +7,22 @@ import Gallery from "../../gallery/Gallery";
 export default function Footer() {
   const socialData = [
     {
-      className: "btn btn-outline-light btn-social",
+      className: "btn btn-outline-light btn-social m1",
       text: null,
       icon: "fab fa-facebook-f",
     },
     {
-      className: "btn btn-outline-light btn-social",
+      className: "btn btn-outline-light btn-social m2",
       text: null,
       icon: "fab fa-twitter",
     },
     {
-      className: "btn btn-outline-light btn-social",
+      className: "btn btn-outline-light btn-social m3",
       text: null,
       icon: "fab fa-instagram",
     },
     {
-      className: "btn btn-outline-light btn-social",
+      className: "btn btn-outline-light btn-social m4",
       text: null,
       icon: "fab fa-linkedin-in",
     },

@@ -45,7 +45,11 @@ export default function ServiceSection() {
   ];
 
   const services = serviceData.map((value) => (
-    <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+    <div
+      key={value.id}
+      className="col-lg-4 col-md-6 wow zoomIn"
+      data-wow-delay="0.1s"
+    >
       <div className="service-item d-flex flex-column justify-content-center text-center rounded">
         <div className="service-icon flex-shrink-0">
           <i className={value.serviceIcon}></i>
